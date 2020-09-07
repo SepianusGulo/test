@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="row justify-content-center">
         <div class="col-md-12">
             @if(session('sukses'))
                 <div class="alert alert-success mt-5" role="alert">
@@ -11,18 +10,23 @@
                 @endif
             </div>
 </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<div class="row">
+            <div class="col-md-12">
+                <!-- BASIC TABLE -->
+                <div class="panel">
+                    <div class="panel-heading">
+                    <h2>Selamat Datang Kembali <span class="text-danger">{{ auth()->user()->name }}</span> Diwebsite Kami</h2>
+                    </div>
+                    <div class="panel-body">
 
-                <div class="card-body">
-                   <h3 class="text-left">Selamat Datang Kembali {{ auth()->user()->name }} Codingku</h3>
+                    </div>
                 </div>
+                <!-- END BASIC TABLE -->
             </div>
-        </div>
-    </div>
-</div>
+		</div>
+
+
+
 @endsection
 
 
